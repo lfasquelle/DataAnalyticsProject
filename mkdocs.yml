@@ -1,0 +1,133 @@
+site_name: Cours première NSI - Les bugs
+# site_url: https://lfasquelle.forge.apps.education.fr/executerpython/
+site_author: 'Ludovic Fasquelle'
+#edit_uri: tree/main/docs/
+docs_dir: docs
+# pour ne pas avoir liens dossier/ ne fonctionnant que sous serveur:
+use_directory_urls: false
+
+copyright:
+  Fasquelle L.
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>.
+
+extra:
+  social:
+    #- icon: fontawesome/solid/paper-plane
+    #  link: mailto:
+    #  name: Mail
+
+    #- icon: fontawesome/brands/gitlab
+    #  link: https://forge.apps.education.fr/lfasquelle/
+    #  name: Dépôt git
+
+    - icon: fontawesome/solid/school
+      link: https://plaine-ain.ent.auvergnerhonealpes.fr/
+      name: Lycée de la plaine de l'Ain
+ 
+nav:
+    - Home: index.md
+    - Débuguer: debug.md
+    - Un exercice: exercice1.md
+    - Quelques erreurs: bugs.md
+  
+      
+
+  
+    
+
+#theme: readthedocs
+theme:
+  name: 'material'
+  language: 'fr'
+  logo: style/logo.png
+  favicon: style/logo.png
+  palette: # Palettes de couleurs jour/nuit
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Passer au mode jour
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Passer au mode nuit
+
+  
+  
+  
+  
+  #palette:
+    #primary: 'indigo'
+    #accent: 'amber'
+  features:
+    #- navigation.instant
+    - navigation.tracking
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    - navigation.top
+    - navigation.path
+    - toc.integrate
+    - header.autohide
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+  
+
+
+
+
+
+
+
+extra_css:
+  - 'style/extra.css'
+
+extra_javascript:
+  - javascripts/config.js
+  #- javascripts/pyodid.js
+  # - xtra/javascripts/interpreter.js
+  #- javascripts/repl.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  #- https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js    #chargé dans l'extension du template html overrides/main.html
+
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+
+#https://python-markdown.github.io/extensions/
+#https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+#https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
+
+markdown_extensions:
+    - attr_list #https://python-markdown.github.io/extensions/attr_list/
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        clickable_checkbox: true
+    - pymdownx.arithmatex #https://squidfunk.github.io/mkdocs-material/extensions/pymdown/
+    - pymdownx.details #https://facelessuser.github.io/pymdown-extensions/extensions/details/
+    - pymdownx.superfences #https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+    - pymdownx.emoji:
+        #emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  #https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
+  #https://www.emojicopy.com/
+    - meta  # https://squidfunk.github.io/mkdocs-material/extensions/metadata/
+    - codehilite:
+        linenums: true  # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
+    - admonition  #https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+    - toc:
+        permalink: '☘'
+        baselevel: 1
+        separator: "_"
+
+
+plugins:
+  - search
+  - awesome-pages:
+      collapse_single_pages: false
+      strict: false
